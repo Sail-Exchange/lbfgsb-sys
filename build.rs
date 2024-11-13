@@ -13,6 +13,7 @@ macro_rules! variable(
 );
 
 fn main() {
+    std::env::set_var("FC", "gfortran");
     let kind = if feature!("STATIC") {
         "static"
     } else {
